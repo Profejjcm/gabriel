@@ -7,10 +7,10 @@ import java.math.MathContext;
 public class CalcularPI {
 
      public static void main(String[] args) {
-        MathContext mc = new MathContext(10);         
+        MathContext mc = new MathContext(NUM_DIG);         
         //meter en el método compute
         BigDecimal pi = new BigDecimal(0);
-        BigDecimal limit = new BigDecimal(1).movePointLeft(10);
+        BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
         for (int k = 0; !stop; k++) {
             //Selecciono todo el codigo, voy a la opcion refactor -> Introduce -> Method
@@ -24,6 +24,7 @@ public class CalcularPI {
         System.out.println(pi.round(mc));
         //meter en el método compute
     }
+    public static final int NUM_DIG = 10; //Selecciono el 10 voy a refactor -> Introduce -> Constant
 
     public static BigDecimal piFunction(int k, MathContext mc) {
         //meter en el método piFunction
