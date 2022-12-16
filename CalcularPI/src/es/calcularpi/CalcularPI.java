@@ -8,7 +8,12 @@ public class CalcularPI {
 
      public static void main(String[] args) {
         MathContext mc = new MathContext(NUM_DIG);         
+        compute(mc);
+    }
+
+    public static void compute(MathContext mc) {
         //meter en el método compute
+        //Selecciono el codigo voy a refactor -> Introduce -> Method
         BigDecimal pi = new BigDecimal(0);
         BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
